@@ -1,0 +1,12 @@
+<h2>Procurar Veículos</h2>
+<form action="/vehicles" method="GET">
+  <label>Série</label>
+  <input type="text" name="serie" value="<%= searchOptions.serie %>" />
+  <button type="submit">Procurar</button>
+</form>
+<br />
+
+<%if(searchOptions.serie != null && searchOptions.serie !=='') {%> <%
+vehicles.forEach(vehicle=> { %>
+<div><%= vehicle.serie %></div>
+<%})%> <%}%>
